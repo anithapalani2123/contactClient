@@ -73,7 +73,7 @@ function App() {
     };
 
     getAllContacts();
-  },[contacts]);
+  },[]);
 
   
 
