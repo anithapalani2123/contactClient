@@ -30,6 +30,7 @@ function App() {
     }
     const response=await api.post("/contacts",request)
     setContacts([...contacts, response.data]);
+    window.location.reload();
   };
 
 
@@ -41,6 +42,7 @@ function App() {
         return contact.id===id ? {...response.data} : contact;
       })
     );
+    window.location.reload();
 
   };
 
@@ -50,6 +52,7 @@ function App() {
       return contact.id !== id;
     });
     setContacts(newContactList);
+    window.location.reload();
   };
   const searchHandler=(searchTerm)=>{
     setSearchTerm(searchTerm);
